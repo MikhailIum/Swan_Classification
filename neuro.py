@@ -63,11 +63,8 @@ def segmentation(image):
     ans = conf_list.index(max(conf_list))
     if ans == 2:
         return "     Лебедь-\n      шипун" + "\n" + str(round(proba, 2))
-    elif ans == 1:
-        return "     Малый\n      лебедь" + "\n" + str(round(proba, 2))
     else:
-        return "     Лебедь-\n      кликун" + "\n" + str(round(proba, 2))
-        # return detection(image)
+        return detection(image)
 
 
 def start(name):
